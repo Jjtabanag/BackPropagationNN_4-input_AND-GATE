@@ -272,6 +272,8 @@ namespace BackPropagation
 
         private void btnTrainMore_Click(object sender, EventArgs e)
         {
+            btnTest.Enabled = true;
+            btnTestAll.Enabled = true;
             for (int i = 0; i < 1000; i++) 
             {
                 double cur = Convert.ToDouble(actual[15].Text);
@@ -378,7 +380,9 @@ namespace BackPropagation
             OpenFileDialog load = openFileDialog1;
             load.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
             if (load.ShowDialog() == DialogResult.OK)
+            {
                 nn.loadWeights(load.FileName);
+            }
         }
     }
 }
