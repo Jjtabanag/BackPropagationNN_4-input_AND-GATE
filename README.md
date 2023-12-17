@@ -25,3 +25,6 @@ The main program is in the Form1.cs.
 5. View the outputs on the output log.
 6. Reset the neural network model if needed.
 7. Goto file tab to save or load weights on your current neural network model if needed.
+
+# BUGS / ISSUES
+1. Loading weights still do not show the number of hidden neurons.
