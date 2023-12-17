@@ -212,8 +212,6 @@ namespace BackPropagation
                 if (value == i)
                 {
                     double act = Convert.ToDouble(actual[i].Text);
-                    //int hi = Convert.ToInt16(hidden[i].Text);
-                    //int ep = Convert.ToInt16(epochs[i].Text);
                     int desired = desired_output[i];
                     if (desired == 0)
                     {
@@ -352,7 +350,6 @@ namespace BackPropagation
             
             printed = false;
             tbTrainingData.Text = "";
-            tbOutputLog.Text = "";
 
             for (int i = 0; i < data; i++)
             {

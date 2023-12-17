@@ -68,6 +68,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.btnTrainMore = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.epoch_15 = new System.Windows.Forms.Label();
             this.hidden_15 = new System.Windows.Forms.Label();
@@ -139,9 +141,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnTestAll = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbOutputLog = new System.Windows.Forms.TextBox();
-            this.btnTrainMore = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -549,6 +548,26 @@
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Output";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(141, 445);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(237, 16);
+            this.label35.TabIndex = 27;
+            this.label35.Text = "has a limit of up to 1000 training epochs";
+            // 
+            // btnTrainMore
+            // 
+            this.btnTrainMore.Enabled = false;
+            this.btnTrainMore.Location = new System.Drawing.Point(25, 433);
+            this.btnTrainMore.Name = "btnTrainMore";
+            this.btnTrainMore.Size = new System.Drawing.Size(110, 39);
+            this.btnTrainMore.TabIndex = 26;
+            this.btnTrainMore.Text = "Train until 0.9";
+            this.btnTrainMore.UseVisualStyleBackColor = true;
+            this.btnTrainMore.Click += new System.EventHandler(this.btnTrainMore_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -1533,37 +1552,6 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Output Log";
             // 
-            // tbOutputLog
-            // 
-            this.tbOutputLog.Location = new System.Drawing.Point(112, 456);
-            this.tbOutputLog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbOutputLog.Multiline = true;
-            this.tbOutputLog.Name = "tbOutputLog";
-            this.tbOutputLog.ReadOnly = true;
-            this.tbOutputLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbOutputLog.Size = new System.Drawing.Size(346, 165);
-            this.tbOutputLog.TabIndex = 13;
-            // 
-            // btnTrainMore
-            // 
-            this.btnTrainMore.Enabled = false;
-            this.btnTrainMore.Location = new System.Drawing.Point(25, 433);
-            this.btnTrainMore.Name = "btnTrainMore";
-            this.btnTrainMore.Size = new System.Drawing.Size(110, 39);
-            this.btnTrainMore.TabIndex = 26;
-            this.btnTrainMore.Text = "Train until 0.9";
-            this.btnTrainMore.UseVisualStyleBackColor = true;
-            this.btnTrainMore.Click += new System.EventHandler(this.btnTrainMore_Click);
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(141, 445);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(237, 16);
-            this.label35.TabIndex = 27;
-            this.label35.Text = "has a limit of up to 1000 training epochs";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1571,7 +1559,6 @@
             this.ClientSize = new System.Drawing.Size(1435, 657);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.tbOutputLog);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lblInputs);
             this.Controls.Add(this.label7);
@@ -1645,7 +1632,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbOutputLog;
         private System.Windows.Forms.Button btnTestAll;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label18;
